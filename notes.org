@@ -1,0 +1,31 @@
+These are the commands I used to create the related migration accordingly:
+#+BEGIN_SRC bash   
+bundle exec rake db:create_migration NAME=create_freebies
+#+END_SRC
+
+I then ran the migration with this command:
+#+BEGIN_SRC bash
+bundle exec rake db:migrate
+#+END_SRC
+
+I then used this command to seed the data accordingly:
+#+BEGIN_SRC bash
+bundle exec rake db:seed
+#+END_SRC
+
+Related relationships for this lab:
+#+BEGIN_SRC ruby
+# Relationships For This Lab:
+# For our purposes, a Company has many Freebies, 
+# a Dev has many Freebies, and a Freebie belongs to a Dev and 
+# to a Company.
+
+# Company --> Freebies
+# Dev --> Freebies
+# Freebie --> Belongs To: Dev
+# Freebie --> Belongs To: Company
+#+END_SRC
+
+Another big note for this lab assignment and similar ones like it:
+- # for instance methods (instance)
+- . for class methods (self.)
